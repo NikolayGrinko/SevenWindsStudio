@@ -9,7 +9,7 @@ import UIKit
 
 class NearesCollectionViewCell: UICollectionViewCell {
     
-	static let identifier = "PhotoCollectionViewCell"
+	static let identifier = "NearesCollectionViewCell"
 	
 
 	

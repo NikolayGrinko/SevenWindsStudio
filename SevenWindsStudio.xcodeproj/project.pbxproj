@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20D28B622B74F71A006CEE52 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D28B612B74F71A006CEE52 /* Places.swift */; };
+		20D28B642B74F74C006CEE52 /* PlacesViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D28B632B74F74C006CEE52 /* PlacesViews.swift */; };
+		20D28B662B74F81E006CEE52 /* Places.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 20D28B652B74F81E006CEE52 /* Places.geojson */; };
+		20D28B692B74FFA4006CEE52 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20D28B682B74FFA4006CEE52 /* Localizable.strings */; };
 		20DB5E152B7015E8009C10BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DB5E142B7015E8009C10BF /* AppDelegate.swift */; };
 		20DB5E172B7015E8009C10BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DB5E162B7015E8009C10BF /* SceneDelegate.swift */; };
 		20DB5E1E2B7015EA009C10BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20DB5E1D2B7015EA009C10BF /* Assets.xcassets */; };
@@ -17,10 +21,14 @@
 		20DB5E332B70EC09009C10BF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DB5E322B70EC09009C10BF /* Model.swift */; };
 		20DB5E422B70F4BE009C10BF /* NearesCafeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DB5E412B70F4BE009C10BF /* NearesCafeViewController.swift */; };
 		20DB5E4E2B7227A1009C10BF /* NearesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DB5E4D2B7227A1009C10BF /* NearesCollectionViewCell.swift */; };
-		20DB5E502B72CAC3009C10BF /* MapKitControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DB5E4F2B72CAC3009C10BF /* MapKitControllerViewController.swift */; };
+		20DB5E502B72CAC3009C10BF /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DB5E4F2B72CAC3009C10BF /* MapKitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		20D28B612B74F71A006CEE52 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
+		20D28B632B74F74C006CEE52 /* PlacesViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViews.swift; sourceTree = "<group>"; };
+		20D28B652B74F81E006CEE52 /* Places.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Places.geojson; sourceTree = "<group>"; };
+		20D28B682B74FFA4006CEE52 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		20DB5E112B7015E8009C10BF /* SevenWindsStudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SevenWindsStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DB5E142B7015E8009C10BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20DB5E162B7015E8009C10BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +41,7 @@
 		20DB5E322B70EC09009C10BF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		20DB5E412B70F4BE009C10BF /* NearesCafeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearesCafeViewController.swift; sourceTree = "<group>"; };
 		20DB5E4D2B7227A1009C10BF /* NearesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearesCollectionViewCell.swift; sourceTree = "<group>"; };
-		20DB5E4F2B72CAC3009C10BF /* MapKitControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitControllerViewController.swift; sourceTree = "<group>"; };
+		20DB5E4F2B72CAC3009C10BF /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20D28B672B74F86D006CEE52 /* ViewsMapKit */ = {
+			isa = PBXGroup;
+			children = (
+				20D28B632B74F74C006CEE52 /* PlacesViews.swift */,
+			);
+			path = ViewsMapKit;
+			sourceTree = "<group>";
+		};
 		20DB5E082B7015E8009C10BF = {
 			isa = PBXGroup;
 			children = (
@@ -69,10 +85,12 @@
 				20DB5E512B72D849009C10BF /* Cell */,
 				20DB5E372B70ED8B009C10BF /* Extension */,
 				20DB5E362B70ED79009C10BF /* Controllers */,
+				20D28B672B74F86D006CEE52 /* ViewsMapKit */,
 				20DB5E352B70ED67009C10BF /* Model */,
+				20D28B652B74F81E006CEE52 /* Places.geojson */,
 				20DB5E342B70ED4D009C10BF /* Application */,
 				20DB5E222B7015EA009C10BF /* Info.plist */,
-				20DB5E4D2B7227A1009C10BF /* NearesCollectionViewCell.swift */,
+				20D28B682B74FFA4006CEE52 /* Localizable.strings */,
 			);
 			path = SevenWindsStudio;
 			sourceTree = "<group>";
@@ -92,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				20DB5E322B70EC09009C10BF /* Model.swift */,
+				20D28B612B74F71A006CEE52 /* Places.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -102,7 +121,7 @@
 				20DB5E282B70161E009C10BF /* LoginViewController.swift */,
 				20DB5E2A2B701730009C10BF /* RegistrationViewController.swift */,
 				20DB5E412B70F4BE009C10BF /* NearesCafeViewController.swift */,
-				20DB5E4F2B72CAC3009C10BF /* MapKitControllerViewController.swift */,
+				20DB5E4F2B72CAC3009C10BF /* MapKitViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -118,6 +137,7 @@
 		20DB5E512B72D849009C10BF /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				20DB5E4D2B7227A1009C10BF /* NearesCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -181,7 +201,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				20DB5E212B7015EA009C10BF /* LaunchScreen.storyboard in Resources */,
+				20D28B692B74FFA4006CEE52 /* Localizable.strings in Resources */,
 				20DB5E1E2B7015EA009C10BF /* Assets.xcassets in Resources */,
+				20D28B662B74F81E006CEE52 /* Places.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,10 +219,12 @@
 				20DB5E152B7015E8009C10BF /* AppDelegate.swift in Sources */,
 				20DB5E2D2B701840009C10BF /* Extension.swift in Sources */,
 				20DB5E422B70F4BE009C10BF /* NearesCafeViewController.swift in Sources */,
+				20D28B622B74F71A006CEE52 /* Places.swift in Sources */,
 				20DB5E332B70EC09009C10BF /* Model.swift in Sources */,
 				20DB5E172B7015E8009C10BF /* SceneDelegate.swift in Sources */,
 				20DB5E2B2B701730009C10BF /* RegistrationViewController.swift in Sources */,
-				20DB5E502B72CAC3009C10BF /* MapKitControllerViewController.swift in Sources */,
+				20D28B642B74F74C006CEE52 /* PlacesViews.swift in Sources */,
+				20DB5E502B72CAC3009C10BF /* MapKitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

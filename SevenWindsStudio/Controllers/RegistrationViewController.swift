@@ -21,6 +21,7 @@ class RegistrationViewController: UIViewController {
 		button.layer.masksToBounds = true
 		button.layer.cornerRadius = Constants.cornerRadius
 		button.backgroundColor = .white
+		button.tintColor = .systemBrown
 		button.setTitleColor(.white, for: .normal)
 		button.addTarget(self, action: #selector(didTapCreateAccountButton), for: .touchUpInside)
 		return button
@@ -143,8 +144,8 @@ class RegistrationViewController: UIViewController {
 		nextButton.frame = CGRect(
 			x: 10,
 			y: 60,
-			width: 30,
-			height: 30
+			width: 25,
+			height: 25
 		)
 		
 		// регистрация

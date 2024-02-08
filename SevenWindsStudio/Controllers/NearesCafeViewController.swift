@@ -24,7 +24,8 @@ class NearesCafeViewController: UIViewController, UICollectionViewDataSource, UI
 		button.setImage(image, for: .normal)
 		button.layer.masksToBounds = true
 		button.layer.cornerRadius = Constants.cornerRadius
-		button.frame = CGRect(x: 10, y: 60, width: 30, height: 30)
+		button.tintColor = .systemBrown
+		button.frame = CGRect(x: 10, y: 60, width: 25, height: 25)
 		button.backgroundColor = .white
 		button.setTitleColor(.white, for: .normal)
 		button.addTarget(self, action: #selector(backRegistrationAccountButton), for: .touchUpInside)
@@ -66,7 +67,7 @@ class NearesCafeViewController: UIViewController, UICollectionViewDataSource, UI
 	
 	@objc private func didTapCreateAccountButton() {
 		
-		let vc = MapKitControllerViewController()
+		let vc = MapKitViewController()
 		vc.modalPresentationStyle = .fullScreen
 		present(vc, animated: true)
 		
