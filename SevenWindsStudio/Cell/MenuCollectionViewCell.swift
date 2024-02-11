@@ -17,6 +17,8 @@ class MenuCollectionViewCell: UICollectionViewCell {
 		var colImageView: UIImageView = {
 			let image = UIImageView()
 			image.contentMode = .scaleAspectFill
+			image.layer.cornerRadius = 10
+			image.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
 			image.clipsToBounds = true
 			image.translatesAutoresizingMaskIntoConstraints = false
 			return image
