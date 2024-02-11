@@ -18,7 +18,6 @@ extension UIView {
 		return  frame.size.height
 	}
 	
-	
 	public var top: CGFloat {
 		return  frame.origin.y
 	}
@@ -33,15 +32,5 @@ extension UIView {
 	
 	public var right: CGFloat {
 		return  frame.origin.x + frame.size.width
-	}
-	
-	
-	
-}
-
-extension String {
-	
-	 func safeDatabaseKey() -> String {
-	   return self.replacingOccurrences(of: ".", with: "-").replacingOccurrences(of: "@", with: "-")
 	}
 }

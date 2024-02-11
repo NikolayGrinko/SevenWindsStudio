@@ -5,15 +5,16 @@
 //  Created by Николай Гринько on 06.02.2024.
 //
 
+
 import UIKit
 import MapKit
 import CoreLocation
 
 class MapKitViewController: UIViewController {
-
+	
 	var places: [Places] = []
 	
-	 let mapView = MKMapView()
+	let mapView = MKMapView()
 	
 	struct Constants {
 		static let cornerRadius: CGFloat = 25.0
@@ -34,8 +35,27 @@ class MapKitViewController: UIViewController {
 	}()
 	
 	@objc private func backRegistrationAccountButton() {
-		
 		let vc = RegistrationViewController()
+		vc.modalPresentationStyle = .fullScreen
+		present(vc, animated: true)
+	}
+	
+	lazy var nextButtons: UIButton = {
+		let button = UIButton()
+		let image = UIImage(systemName: "chevron.right", withConfiguration: UIImage.SymbolConfiguration(pointSize: 30))
+		button.setImage(image, for: .normal)
+		button.layer.masksToBounds = true
+		button.layer.cornerRadius = Constants.cornerRadius
+		button.tintColor = .systemBrown
+		button.frame = CGRect(x: 350, y: 60, width: 25, height: 25)
+		button.backgroundColor = .white
+		button.setTitleColor(.white, for: .normal)
+		button.addTarget(self, action: #selector(nextMenuButtons), for: .touchUpInside)
+		return button
+	}()
+	
+	@objc private func nextMenuButtons() {
+		let vc = NextMenuViewController()
 		vc.modalPresentationStyle = .fullScreen
 		present(vc, animated: true)
 	}
@@ -45,50 +65,49 @@ class MapKitViewController: UIViewController {
 		label.text = "Карта"
 		label.font = .systemFont(ofSize: 18, weight: .medium)
 		label.frame = CGRect(x: 140, y: 55, width: 100, height: 40)
-		label.textColor = UIColor.systemBrown
+		label.textColor = #colorLiteral(red: 0.5182373524, green: 0.3868932724, blue: 0.2507439256, alpha: 1)
 		label.textAlignment = .center
 		label.translatesAutoresizingMaskIntoConstraints = false
 		return label
 	}()
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	override func viewDidLoad() {
+		super.viewDidLoad()
 		mapView.delegate = self
 		
 		view.addSubview(backButton)
 		view.addSubview(titleLabel)
+		view.addSubview(nextButtons)
 		view.addSubview(mapView)
 		mapView.frame = CGRect(x: 0, y: 100, width: view.frame.size.width, height: view.frame.size.height)
 		view.backgroundColor = .white
 		
+		mapView.delegate = self
+		// координаты положения юзера
+		let initialLocation = CLLocation(latitude: 59.9358713, longitude: 30.3205176)
+		mapView.centerLocation(initialLocation)
 		
-			mapView.delegate = self
-			// координаты положения юзера
-			let initialLocation = CLLocation(latitude: 59.929691, longitude: 30.362239)
-			mapView.centerLocation(initialLocation)
-			
-			// граница увеличения карты
-			let cameraCenter = CLLocation(latitude: 59.929691, longitude: 30.362239)
-			let region = MKCoordinateRegion(center: cameraCenter.coordinate, latitudinalMeters: 5000, longitudinalMeters: 5000)
-			mapView.setCameraBoundary(MKMapView.CameraBoundary(coordinateRegion: region), animated: true)
-			
-			// с какого и по какой масштаб сможет увеличивать
-			let zoomRage = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 100000)
-			mapView.setCameraZoomRange(zoomRage, animated: true)
-			
+		// граница увеличения карты
+		let cameraCenter = CLLocation(latitude: 59.9358713, longitude: 30.3205176)
+		let region = MKCoordinateRegion(center: cameraCenter.coordinate, latitudinalMeters: 5000, longitudinalMeters: 5000)
+		mapView.setCameraBoundary(MKMapView.CameraBoundary(coordinateRegion: region), animated: true)
 		
-			//mapView.register(PlacesMarkersViews.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-			mapView.register(PlacesViews.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-			
-			loadInitialData()
-			mapView.addAnnotations(places)
-    }
-    
+		// с какого и по какой масштаб сможет увеличивать
+		let zoomRage = MKMapView.CameraZoomRange(maxCenterCoordinateDistance: 100000)
+		mapView.setCameraZoomRange(zoomRage, animated: true)
+		
+		//ew.register(PlacesMarkersViews.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+		mapView.register(PlacesViews.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+		
+		loadInitialData()
+		mapView.addAnnotations(places)
+	}
+	
 	// метод берет данные с json с проекта
 	func loadInitialData() {
 		guard let fileName = Bundle.main.url(forResource: "Places", withExtension: "geojson"),
-			 
-		let placesData = try? Data(contentsOf: fileName)
+			  
+				let placesData = try? Data(contentsOf: fileName)
 		else {
 			return
 		}

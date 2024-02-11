@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class RegistrationViewController: UIViewController {
-
+	
 	struct Constants {
 		static let cornerRadius: CGFloat = 25.0
 	}
@@ -38,7 +38,7 @@ class RegistrationViewController: UIViewController {
 		let label = UILabel()
 		label.text = "Вход"
 		label.font = .systemFont(ofSize: 18, weight: .medium)
-		label.textColor = UIColor.systemBrown
+		label.textColor = #colorLiteral(red: 0.5182373524, green: 0.3868932724, blue: 0.2507439256, alpha: 1)
 		label.textAlignment = .center
 		label.numberOfLines = 0
 		label.translatesAutoresizingMaskIntoConstraints = false
@@ -114,18 +114,13 @@ class RegistrationViewController: UIViewController {
 		vc.modalPresentationStyle = .fullScreen
 		present(vc, animated: true)
 		
-
+		
 	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
-//		loginButton.addTarget(self,
-//								 action: #selector(didTapRegister),
-//								 for: .touchUpInside)
-		
-		userNameEmailField.delegate = self
-		passwordField.delegate = self
+		//		userNameEmailField.delegate = self
+		//		passwordField.delegate = self
 		
 		view.addSubview(nextButton)
 		view.addSubview(titleLabel)
@@ -134,7 +129,6 @@ class RegistrationViewController: UIViewController {
 		view.addSubview(passwordLabel)
 		view.addSubview(passwordField)
 		view.addSubview(loginButton)
-		
 		view.backgroundColor = .systemBackground
 	}
 	
@@ -143,7 +137,7 @@ class RegistrationViewController: UIViewController {
 		//
 		nextButton.frame = CGRect(
 			x: 10,
-			y: 60,
+			y: 80,
 			width: 25,
 			height: 25
 		)
@@ -155,7 +149,7 @@ class RegistrationViewController: UIViewController {
 			width: 200,
 			height: 30
 		)
-	   // Email
+		// Email
 		emailLabel.frame = CGRect(
 			x: 25,
 			y:  220,
@@ -191,34 +185,7 @@ class RegistrationViewController: UIViewController {
 			height: 52.0
 		)
 	}
-	
-
-//	@objc private func didTapRegister() {
-//		
-//		userNameEmailField.resignFirstResponder()
-//		passwordField.resignFirstResponder()
-//		
-//		guard let email = userNameEmailField.text, !email.isEmpty,
-//			  let password = passwordField.text, !password.isEmpty, password.count >= 8 else {
-//			return
-//		}
-//	}
 }
 
 
-	extension RegistrationViewController: UITextFieldDelegate {
-		
-//		func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//			if textField == userNameEmailField {
-//				passwordField.becomeFirstResponder()
-//			}
-//			else if textField == passwordField {
-//				passwordField.becomeFirstResponder()
-//			}
-//			else {
-//				didTapRegister()
-//			}
-//			return true
-//		}
-		
-	}
+

@@ -7,17 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		205E0B592B7612C000C1474A /* NextMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205E0B582B7612C000C1474A /* NextMenuViewController.swift */; };
+		205E0B5B2B76131300C1474A /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205E0B5A2B76131300C1474A /* MenuCollectionViewCell.swift */; };
+		205E0B892B7653BC00C1474A /* CustomStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205E0B882B7653BC00C1474A /* CustomStepper.swift */; };
+		205E0B8C2B7653D600C1474A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 205E0B8B2B7653D600C1474A /* SnapKit */; };
+		205E0B8E2B7653D600C1474A /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 205E0B8D2B7653D600C1474A /* SnapKit-Dynamic */; };
+		205E0B902B76566C00C1474A /* ModelMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205E0B8F2B76566C00C1474A /* ModelMenuCell.swift */; };
+		205E0B922B7825D700C1474A /* OrderCoffeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205E0B912B7825D700C1474A /* OrderCoffeeViewController.swift */; };
+		205E0B942B782A3B00C1474A /* OrderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205E0B932B782A3B00C1474A /* OrderCollectionViewCell.swift */; };
+		205E0B962B7854C200C1474A /* CustomStepperMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205E0B952B7854C200C1474A /* CustomStepperMenu.swift */; };
 		20D28B622B74F71A006CEE52 /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D28B612B74F71A006CEE52 /* Places.swift */; };
 		20D28B642B74F74C006CEE52 /* PlacesViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D28B632B74F74C006CEE52 /* PlacesViews.swift */; };
 		20D28B662B74F81E006CEE52 /* Places.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 20D28B652B74F81E006CEE52 /* Places.geojson */; };
-		20D28B692B74FFA4006CEE52 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 20D28B682B74FFA4006CEE52 /* Localizable.strings */; };
 		20DB5E152B7015E8009C10BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DB5E142B7015E8009C10BF /* AppDelegate.swift */; };
 		20DB5E172B7015E8009C10BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DB5E162B7015E8009C10BF /* SceneDelegate.swift */; };
 		20DB5E1E2B7015EA009C10BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20DB5E1D2B7015EA009C10BF /* Assets.xcassets */; };
 		20DB5E212B7015EA009C10BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20DB5E1F2B7015EA009C10BF /* LaunchScreen.storyboard */; };
 		20DB5E292B70161E009C10BF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DB5E282B70161E009C10BF /* LoginViewController.swift */; };
 		20DB5E2B2B701730009C10BF /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DB5E2A2B701730009C10BF /* RegistrationViewController.swift */; };
-		20DB5E2D2B701840009C10BF /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DB5E2C2B701840009C10BF /* Extension.swift */; };
+		20DB5E2D2B701840009C10BF /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DB5E2C2B701840009C10BF /* ExtensionUIView.swift */; };
 		20DB5E332B70EC09009C10BF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DB5E322B70EC09009C10BF /* Model.swift */; };
 		20DB5E422B70F4BE009C10BF /* NearesCafeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DB5E412B70F4BE009C10BF /* NearesCafeViewController.swift */; };
 		20DB5E4E2B7227A1009C10BF /* NearesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DB5E4D2B7227A1009C10BF /* NearesCollectionViewCell.swift */; };
@@ -25,10 +33,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		205E0B582B7612C000C1474A /* NextMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextMenuViewController.swift; sourceTree = "<group>"; };
+		205E0B5A2B76131300C1474A /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		205E0B882B7653BC00C1474A /* CustomStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStepper.swift; sourceTree = "<group>"; };
+		205E0B8F2B76566C00C1474A /* ModelMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMenuCell.swift; sourceTree = "<group>"; };
+		205E0B912B7825D700C1474A /* OrderCoffeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCoffeeViewController.swift; sourceTree = "<group>"; };
+		205E0B932B782A3B00C1474A /* OrderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCollectionViewCell.swift; sourceTree = "<group>"; };
+		205E0B952B7854C200C1474A /* CustomStepperMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStepperMenu.swift; sourceTree = "<group>"; };
 		20D28B612B74F71A006CEE52 /* Places.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 		20D28B632B74F74C006CEE52 /* PlacesViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesViews.swift; sourceTree = "<group>"; };
 		20D28B652B74F81E006CEE52 /* Places.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Places.geojson; sourceTree = "<group>"; };
-		20D28B682B74FFA4006CEE52 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		20DB5E112B7015E8009C10BF /* SevenWindsStudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SevenWindsStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20DB5E142B7015E8009C10BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20DB5E162B7015E8009C10BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +51,7 @@
 		20DB5E222B7015EA009C10BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20DB5E282B70161E009C10BF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		20DB5E2A2B701730009C10BF /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		20DB5E2C2B701840009C10BF /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		20DB5E2C2B701840009C10BF /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 		20DB5E322B70EC09009C10BF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		20DB5E412B70F4BE009C10BF /* NearesCafeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearesCafeViewController.swift; sourceTree = "<group>"; };
 		20DB5E4D2B7227A1009C10BF /* NearesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearesCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -49,12 +63,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				205E0B8C2B7653D600C1474A /* SnapKit in Frameworks */,
+				205E0B8E2B7653D600C1474A /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		205E0B852B76536E00C1474A /* CustomStepper */ = {
+			isa = PBXGroup;
+			children = (
+				205E0B882B7653BC00C1474A /* CustomStepper.swift */,
+				205E0B952B7854C200C1474A /* CustomStepperMenu.swift */,
+			);
+			path = CustomStepper;
+			sourceTree = "<group>";
+		};
 		20D28B672B74F86D006CEE52 /* ViewsMapKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +107,7 @@
 		20DB5E132B7015E8009C10BF /* SevenWindsStudio */ = {
 			isa = PBXGroup;
 			children = (
+				205E0B852B76536E00C1474A /* CustomStepper */,
 				20DB5E512B72D849009C10BF /* Cell */,
 				20DB5E372B70ED8B009C10BF /* Extension */,
 				20DB5E362B70ED79009C10BF /* Controllers */,
@@ -90,7 +116,6 @@
 				20D28B652B74F81E006CEE52 /* Places.geojson */,
 				20DB5E342B70ED4D009C10BF /* Application */,
 				20DB5E222B7015EA009C10BF /* Info.plist */,
-				20D28B682B74FFA4006CEE52 /* Localizable.strings */,
 			);
 			path = SevenWindsStudio;
 			sourceTree = "<group>";
@@ -111,6 +136,7 @@
 			children = (
 				20DB5E322B70EC09009C10BF /* Model.swift */,
 				20D28B612B74F71A006CEE52 /* Places.swift */,
+				205E0B8F2B76566C00C1474A /* ModelMenuCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -122,6 +148,8 @@
 				20DB5E2A2B701730009C10BF /* RegistrationViewController.swift */,
 				20DB5E412B70F4BE009C10BF /* NearesCafeViewController.swift */,
 				20DB5E4F2B72CAC3009C10BF /* MapKitViewController.swift */,
+				205E0B582B7612C000C1474A /* NextMenuViewController.swift */,
+				205E0B912B7825D700C1474A /* OrderCoffeeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -129,7 +157,7 @@
 		20DB5E372B70ED8B009C10BF /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				20DB5E2C2B701840009C10BF /* Extension.swift */,
+				20DB5E2C2B701840009C10BF /* ExtensionUIView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -138,6 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				20DB5E4D2B7227A1009C10BF /* NearesCollectionViewCell.swift */,
+				205E0B5A2B76131300C1474A /* MenuCollectionViewCell.swift */,
+				205E0B932B782A3B00C1474A /* OrderCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -158,6 +188,10 @@
 			dependencies = (
 			);
 			name = SevenWindsStudio;
+			packageProductDependencies = (
+				205E0B8B2B7653D600C1474A /* SnapKit */,
+				205E0B8D2B7653D600C1474A /* SnapKit-Dynamic */,
+			);
 			productName = SevenWindsStudio;
 			productReference = 20DB5E112B7015E8009C10BF /* SevenWindsStudio.app */;
 			productType = "com.apple.product-type.application";
@@ -186,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 20DB5E082B7015E8009C10BF;
+			packageReferences = (
+				205E0B8A2B7653D600C1474A /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 20DB5E122B7015E8009C10BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -201,7 +238,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				20DB5E212B7015EA009C10BF /* LaunchScreen.storyboard in Resources */,
-				20D28B692B74FFA4006CEE52 /* Localizable.strings in Resources */,
 				20DB5E1E2B7015EA009C10BF /* Assets.xcassets in Resources */,
 				20D28B662B74F81E006CEE52 /* Places.geojson in Resources */,
 			);
@@ -215,15 +251,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				20DB5E292B70161E009C10BF /* LoginViewController.swift in Sources */,
+				205E0B942B782A3B00C1474A /* OrderCollectionViewCell.swift in Sources */,
+				205E0B592B7612C000C1474A /* NextMenuViewController.swift in Sources */,
 				20DB5E4E2B7227A1009C10BF /* NearesCollectionViewCell.swift in Sources */,
 				20DB5E152B7015E8009C10BF /* AppDelegate.swift in Sources */,
-				20DB5E2D2B701840009C10BF /* Extension.swift in Sources */,
+				20DB5E2D2B701840009C10BF /* ExtensionUIView.swift in Sources */,
 				20DB5E422B70F4BE009C10BF /* NearesCafeViewController.swift in Sources */,
+				205E0B5B2B76131300C1474A /* MenuCollectionViewCell.swift in Sources */,
 				20D28B622B74F71A006CEE52 /* Places.swift in Sources */,
+				205E0B922B7825D700C1474A /* OrderCoffeeViewController.swift in Sources */,
 				20DB5E332B70EC09009C10BF /* Model.swift in Sources */,
+				205E0B962B7854C200C1474A /* CustomStepperMenu.swift in Sources */,
 				20DB5E172B7015E8009C10BF /* SceneDelegate.swift in Sources */,
 				20DB5E2B2B701730009C10BF /* RegistrationViewController.swift in Sources */,
+				205E0B892B7653BC00C1474A /* CustomStepper.swift in Sources */,
 				20D28B642B74F74C006CEE52 /* PlacesViews.swift in Sources */,
+				205E0B902B76566C00C1474A /* ModelMenuCell.swift in Sources */,
 				20DB5E502B72CAC3009C10BF /* MapKitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +480,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		205E0B8A2B7653D600C1474A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		205E0B8B2B7653D600C1474A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 205E0B8A2B7653D600C1474A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		205E0B8D2B7653D600C1474A /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 205E0B8A2B7653D600C1474A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 20DB5E092B7015E8009C10BF /* Project object */;
 }

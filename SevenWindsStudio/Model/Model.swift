@@ -15,12 +15,11 @@ struct WelcomeElement: Codable {
 	let price: Int
 	let point: Point
 }
-	
-	// MARK: - Point
-	struct Point: Codable {
-		let latitude: String
-		let longitude: String
-	}
-	
-	typealias Welcome = [WelcomeElement]
 
+// MARK: - Point
+struct Point: Codable {
+	let latitude: String
+	let longitude: String
+}
+
+typealias Welcome = [WelcomeElement]

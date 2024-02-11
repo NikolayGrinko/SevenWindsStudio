@@ -67,30 +67,15 @@ class Places: NSObject, MKAnnotation {
 		return mapItem
 	}
 	
-	// Color marker
-	var markerTintColor: UIColor {
-		switch discipline {
-			case "Cathedral": return .red
-			case "Home": return .green
-			default:
-				return .green
-		}
-	}
-	
 	var image: UIImage {
 		guard let name = discipline else {
-			return #imageLiteral(resourceName: "2222")
+			return #imageLiteral(resourceName: "cofe")
 		}
 		switch name {
-			case "Cathedral": return #imageLiteral(resourceName: "1111")
+			case "Cathedral": return #imageLiteral(resourceName: "cofe")
 			case "Home": return #imageLiteral(resourceName: "cofe")
 			default:
-				// XEZ
 				return #imageLiteral(resourceName: "2222")
-		
-				
-				
 		}
 	}
-	
 }

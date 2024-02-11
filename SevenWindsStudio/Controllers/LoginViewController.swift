@@ -11,7 +11,6 @@ import SafariServices
 
 class LoginViewController: UIViewController {
 	
-	
 	struct Constants {
 		static let cornerRadius: CGFloat = 25.0
 	}
@@ -20,7 +19,7 @@ class LoginViewController: UIViewController {
 		let label = UILabel()
 		label.text = "Регистрация"
 		label.font = .systemFont(ofSize: 18, weight: .medium)
-		label.textColor = UIColor.systemBrown
+		label.textColor = #colorLiteral(red: 0.5182373524, green: 0.3868932724, blue: 0.2507439256, alpha: 1)
 		label.textAlignment = .center
 		label.numberOfLines = 0
 		label.translatesAutoresizingMaskIntoConstraints = false
@@ -114,20 +113,16 @@ class LoginViewController: UIViewController {
 	}()
 	
 	
-	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		navigationItem.title = "Регистрация"
-//		loginButton.addTarget(self, action: #selector(didTapLoginButton),
-//							  for: .touchUpInside)
-		
-		usernameEmailField.delegate = self
-		passwordField.delegate = self
+		loginButton.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
+//		usernameEmailField.delegate = self
+//		passwordField.delegate = self
 		addSubviews()
 		view.backgroundColor = .systemBackground
-
+		
 	}
-	
 	
 	override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
@@ -138,7 +133,7 @@ class LoginViewController: UIViewController {
 			width: 200,
 			height: 30
 		)
-       // Email
+		// Email
 		emailLabel.frame = CGRect(
 			x: 25,
 			y:  220,
@@ -187,13 +182,8 @@ class LoginViewController: UIViewController {
 			width: view.width - 50,
 			height: 52.0
 		)
-		
-		
-		
 	}
 	
-
-
 	private func addSubviews() {
 		view.addSubview(titleLabel)
 		view.addSubview(emailLabel)
@@ -205,49 +195,16 @@ class LoginViewController: UIViewController {
 		view.addSubview(loginButton)
 	}
 	
-//	@objc private func didTapLoginButton() {
-//		passwordField.resignFirstResponder()
-//		usernameEmailField.resignFirstResponder()
-//		
-//		guard let usernameEmail = usernameEmailField.text, !usernameEmail.isEmpty,
-//			let password = passwordField.text, !password.isEmpty, password.count >= 8 else {
-//			return
-//		}
-//		
-//		var username: String?
-//		var email: String?
-//		// login functionality
-//		if usernameEmail.contains("@"), usernameEmail.contains(".") {
-//			email = usernameEmail
-//		}
-//		else {
-//		   // usename
-//			username = usernameEmail
-//		}
-//		
-//	}
-
+	@objc private func didTapLoginButton() {
+		passwordField.resignFirstResponder()
+		usernameEmailField.resignFirstResponder()
+	}
 	
 	@objc private func didTapCreateAccountButton() {
 		
 		let vc = RegistrationViewController()
 		vc.modalPresentationStyle = .fullScreen
 		present(vc, animated: true)
-		
-
 	}
 }
 
-
-extension LoginViewController: UITextFieldDelegate {
-	
-//	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//		if textField == usernameEmailField {
-//			passwordField.becomeFirstResponder()
-//		}
-//		else if textField == passwordField {
-//			didTapLoginButton()
-//		}
-//		return true
-//	}
-}

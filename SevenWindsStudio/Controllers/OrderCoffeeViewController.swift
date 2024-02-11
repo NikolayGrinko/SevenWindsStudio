@@ -1,21 +1,23 @@
 //
-//  NearesCafeControllerViewController.swift
+//  OrderCoffeeVC.swift
 //  SevenWindsStudio
 //
-//  Created by Николай Гринько on 05.02.2024.
+//  Created by Николай Гринько on 11.02.2024.
 //
 
+import Foundation
 import UIKit
 
-class NearesCafeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+
+class OrderCoffeeViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 	
 	struct Constants {
 		static let cornerRadius: CGFloat = 25.0
 	}
 	
-	private var modelLoca: [String] = ["1 км от вас", "2 км от вас", "1 км от вас", "300 м от вас", "3 км от вас"]
-	
-	private let model: [String] = ["BEDOEV COFFEE", "Coffee Like", "EM&DI Coffee and Snacks", "Коффе есть", "BEDOEV COFFEE 2"]
+	private var modelName: [String] = ["Эспрессо", "Капучино", "Латте"]
+	private var modelCount: [String] = ["200 руб", "250 руб", "260 руб"]
+	private var modelStepper: [CustomStepper] = []
 	
 	private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()
 	)
@@ -35,7 +37,6 @@ class NearesCafeViewController: UIViewController, UICollectionViewDataSource, UI
 	}()
 	
 	@objc private func backRegistrationAccountButton() {
-		
 		let vc = RegistrationViewController()
 		vc.modalPresentationStyle = .fullScreen
 		present(vc, animated: true)
@@ -43,21 +44,32 @@ class NearesCafeViewController: UIViewController, UICollectionViewDataSource, UI
 	
 	private lazy var titleLabel: UILabel = {
 		let label = UILabel()
-		label.text = "Ближайшие кофейни"
+		label.text = "Ваш заказ"
 		label.font = .systemFont(ofSize: 18, weight: .medium)
-		label.frame = CGRect(x: 100, y: 50, width: 200, height: 40)
+		label.frame = CGRect(x: 90, y: 50, width: 200, height: 40)
 		label.textColor = #colorLiteral(red: 0.5182373524, green: 0.3868932724, blue: 0.2507439256, alpha: 1)
 		label.textAlignment = .center
-		label.translatesAutoresizingMaskIntoConstraints = false
+		return label
+	}()
+	
+	private var titleOrderTextLabel: UILabel = {
+		var textLabel = "      "
+		let label = UILabel()
+		label.text = "  Время ожидания заказа \(textLabel) \(textLabel) 15 минут! \(textLabel) \(textLabel) \(textLabel) \(textLabel) \(textLabel) Спасибо, что выбрали нас!"
+		label.font = .systemFont(ofSize: 24, weight: .medium)
+		label.frame = CGRect(x: 20, y: 350, width: 349, height: 100)
+		label.textColor = UIColor.systemBrown
+		label.numberOfLines = 3
+		label.textAlignment = .center
 		return label
 	}()
 	
 	lazy var nextMapKitButton: UIButton = {
 		let button = UIButton()
-		button.setTitle("На карте", for: .normal)
+		button.setTitle("Оплатить", for: .normal)
 		button.layer.masksToBounds = true
 		button.layer.cornerRadius = Constants.cornerRadius
-		button.frame = CGRect(x: 30, y: 660, width: 338, height: 47)
+		button.frame = CGRect(x: 30, y: 650, width: 338, height: 47)
 		button.backgroundColor = #colorLiteral(red: 0.2048919797, green: 0.175404191, blue: 0.1001136526, alpha: 1)
 		button.setTitleColor(.white, for: .normal)
 		button.addTarget(self, action: #selector(didTapCreateAccountButton), for: .touchUpInside)
@@ -73,11 +85,13 @@ class NearesCafeViewController: UIViewController, UICollectionViewDataSource, UI
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		collectionView.register(NearesCollectionViewCell.self, forCellWithReuseIdentifier: NearesCollectionViewCell.identifier)
+		view.backgroundColor = .white
+		collectionView.register(OrderCollectionViewCell.self, forCellWithReuseIdentifier: OrderCollectionViewCell.identifier)
 		collectionView.addSubview(nextMapKitButton)
 		view.addSubview(backButton)
+		collectionView.addSubview(titleOrderTextLabel)
 		view.addSubview(collectionView)
-		view.backgroundColor = .white
+		collectionView.backgroundColor = .white
 		view.addSubview(titleLabel)
 		view.backgroundColor = #colorLiteral(red: 0.9812716842, green: 0.9763050675, blue: 0.9763934016, alpha: 1)
 		
@@ -91,23 +105,22 @@ class NearesCafeViewController: UIViewController, UICollectionViewDataSource, UI
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return model.count
+		return modelName.count
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		var cell = UICollectionViewCell()
 		
-		if let labelNames = collectionView.dequeueReusableCell(withReuseIdentifier: NearesCollectionViewCell.identifier, for: indexPath) as? NearesCollectionViewCell {
+		if let labelNames = collectionView.dequeueReusableCell(withReuseIdentifier: OrderCollectionViewCell.identifier, for: indexPath) as? OrderCollectionViewCell {
 			
-			labelNames.configure(label: model[indexPath.row])
-			labelNames.configureLoc(labelLocation: modelLoca[indexPath.row])
+			//labelNames.configure(label: modelName[indexPath.row])
+			labelNames.configureLoc(labelName: modelName[indexPath.row], labelCount: modelCount[indexPath.row])
 			labelNames.layer.backgroundColor = #colorLiteral(red: 0.9639263749, green: 0.8997291923, blue: 0.8184673786, alpha: 1)
-			//labelNames.layer.borderWidth = 5
-			labelNames.layer.cornerRadius = 10
-			labelNames.layer.shadowOpacity = 0.5
+			labelNames.layer.cornerRadius = 5
+			labelNames.layer.shadowOpacity = 0.3
 			labelNames.layer.masksToBounds = false
 			labelNames.layer.shadowColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-			labelNames.layer.shadowOffset = CGSize(width: 0, height: 4)
+			labelNames.layer.shadowOffset = CGSize(width: 0, height: 3)
 			labelNames.layer.shouldRasterize = true
 			
 			cell = labelNames
@@ -142,3 +155,4 @@ class NearesCafeViewController: UIViewController, UICollectionViewDataSource, UI
 	}
 	
 }
+
