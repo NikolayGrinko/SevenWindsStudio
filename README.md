@@ -14,7 +14,10 @@
 
 
 
-<img width="384" alt="Снимок экрана 2024-02-11 в 04 46 08" src="https://github.com/NikolayGrinko/SevenWindsStudio/assets/112849355/1014a1b9-2480-474e-9c77-3bb5a59f9182">
+<img width="389" alt="Снимок экрана 2024-02-12 в 00 45 01" src="https://github.com/NikolayGrinko/SevenWindsStudio/assets/112849355/ec39c217-0105-45c0-a33b-7819b20d2e93">
+
+
+
 
 
 
